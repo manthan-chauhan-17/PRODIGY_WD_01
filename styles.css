@@ -1,0 +1,247 @@
+:root {
+    --color1: #333;
+    --color2: #e04344;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    background-color: #f4f4f4;
+    padding-top: 100px;
+}
+/* Navigation Bar */
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    color: #fff;
+    background-color: #333;
+    border: 1px solid transparent;
+    font-size: 32px;
+    margin: 10px;
+}
+
+.nav-item {
+    margin: 15px;
+    cursor: pointer;
+}
+
+.nav-item>a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.nav-item:hover {
+    text-decoration: underline;
+}
+
+#logo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+}
+
+/* Main */
+.main {
+    border: 1px solid transparent;
+    background-image: url('pics/pic.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 100vh;
+}
+
+#tagline {
+    font-family: cursive;
+    color: #333;
+    padding: 10px;
+    margin: 10px;
+    margin-top: 120px;
+    margin-left: 50px;
+    letter-spacing: 4px;
+}
+
+#smallText {
+    font-size: 32px;
+}
+
+b {
+    font-size: 52px;
+}
+
+#para {
+    width: 30%;
+    font-size: 24px;
+    padding: 10px;
+    margin: 10px;
+    margin-left: 50px;
+}
+
+/* Button */
+#shop {
+    margin: 10px;
+    padding: 10px;
+    margin-left: 50px;
+    margin-top: 20px;
+    width: 16%;
+    height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    background-color: var(--color1);
+    color: var(--color2);
+    transition: background-color 0.3s ease-in-out;
+    border: 1px solid var(--color2);
+}
+
+#shop:hover {
+    background-color: var(--color2);
+    color: var(--color1);
+    border: 1px solid var(--color1);
+}
+/* SLIDER */
+.slider-container {
+    width: 80%;
+    margin: 50px auto;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+}
+
+.slider-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-right: 10px;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+h3,
+p {
+    margin: 10px 0;
+}
+
+.slider-controls {
+    position: relative;
+    width: 100%;
+}
+
+.slider-controls button {
+    z-index: 1;
+    position: absolute;
+    transform: translateY(500%);
+    font-size: 24px;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+.prev {
+    left: -22px;
+}
+
+.next {
+    right: -22px;
+}
+
+/* About US */
+.header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+}
+
+section {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+h1 {
+    color: #fff;
+}
+
+p {
+    line-height: 1.6;
+    color: #666;
+}
+
+/* Footer */
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Media Queries */
+@media screen and (max-width : 900px) {
+    .nav {
+        flex-direction: column;
+        position: static;
+        margin-top: -90px;
+    }
+
+    .main {
+        background-image: url('pics/peri-stojnic-r3rbIwZ9DJc-unsplash.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        height: 100vh;
+        z-index: 0;
+    }
+    #tagline{
+        color: #f4f4f4;
+        margin-top: 0;
+    }
+    #para{
+        display: none;
+    }
+    #shop{
+        position: absolute;
+        top: 850px;
+        left: 15%;
+        width: 50%;
+        height: 80px;
+    }
+    /* SLIDER */
+    .slider-wrapper {
+        width: 300%;
+    }
+
+    .slide {
+        width: 100%;
+    }
+}
